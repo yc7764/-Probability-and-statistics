@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.star{
+		border: 2px solid black;
+		width: 200px;
+		height: 240px;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$('body').append('<h2>Happy Day~~~~</h2>');
+	$('h2').before('<font color=red>오늘은 화요일</font>');
+	
+	//1.이미지를 부착해보겠다.
+	var h1 = "<h1>잘나가는 여자들</h1>"
+
+	var img1 = '<img src="./image/1.jpg">'
+	var img2 = '<img src="./image/2.jpg">'
+	var img3 = '<img src="./image/3.jpg">'
+	
+	//2. body 태그에  h1, 이미지들을 부착.....스타일....addClass
+	$("body").append(h1, img1, img2, img3)
+
+	$("img").addClass("star")
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+

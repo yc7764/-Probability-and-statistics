@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prop() 함수 사용하기 : version 9에서 새롭게 추가</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	//체크하기 버튼 클릭하면
+	$('#checkBtn').click(function() {
+		//prop적용
+		$('#mailing').prop('checked',true);
+	});
+	
+	//체크해제하기 버튼 클릭하면
+	$('#checkBtn2').click(function() {
+		$('#mailing').prop('checked',false);
+	});
+});
+</script>
+</head>
+<body>
+메일 확인 :: <input type="checkbox" id="mailing">
+<input type="button" value="체크하기" id="checkBtn">
+<input type="button" value="체크해제" id="checkBtn2">
+</body>
+</html>
+
+
+
+
+
+
+
+

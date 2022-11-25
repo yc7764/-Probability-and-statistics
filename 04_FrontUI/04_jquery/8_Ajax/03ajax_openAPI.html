@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		$("#send").on('click',function(){
+			$.ajax({
+				//요청
+				type: 'get',
+				url:"http://localhost:5500/member.json",
+				//응답시 서버에서 전달되는 데이터 타입을 지정하는 옵션
+				dataType: 'json',
+
+				//응답
+				success:function(result){
+					//alert(result)
+					var str='';
+
+					$.each(result, function(index, item){
+						var no = index + 1;
+						var name = item.name;
+						var age = item.age;
+						var addr = item.addr;
+
+						str += '<tr>'
+						str += '<td>' + no + '</td>'
+						str += '<td>' + name + '</td>'
+						str += '<td>' + age + '</td>'
+						str += '<td>' + addr + '</td>'
+						str += '</tr>'
+					})//each
+					$("tbody tr").remove()
+					$("tbody").append(str)
+				}, //callback
+				error:function(err){
+					alert("오류발생===>" + err)
+				}
+			})//ajax
+		})//on
+		
+	}); //ready
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	<h2>====OPEN API 공공데이타 가지오기 ====</h2>
+	<a href="#" id="send"> json 데이타 서버로 요청하기</a>
+	<p></p>
+	<table border="2" id="table" width="60%">
+		<thead>
+			<tr>
+				<th>번호</th><th>이름</th><th>나이</th><th>주소</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

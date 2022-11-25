@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hisName = "Tomas";
+        name = "James"
+        console.log(hisName);
+        console.log(name);
+
+        function showAge(){
+            let age = 33; //완벽히 지역변수로 지정, 전역변수와 구분해서 사용
+            myAge = 44; // 전역으로 잡힌다.. var를 지정해야 지역으로 지정
+            console.log(age);
+            console.log(myAge);
+        }
+        
+        showAge();
+        //console.log(myAge);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

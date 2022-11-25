@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover(), addClass(), removeClass()</title>
+<style type="text/css">
+	.larger{
+        width: 200px;
+        border: 4px solid crimson;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$("img").hover(function(){
+        $(this).addClass('larger')
+    }, function(){
+        $(this).removeClass('larger')
+    })
+});
+</script>
+</head>
+<body>
+<h2>Bigger Image...</h2>
+<img src="./image/1.jpg" alt="이미지..." width="100"><br>
+<img src="./image/2.jpg" alt="이미지..." width="100"><br>
+<img src="./image/3.jpg" alt="이미지..." width="100"><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

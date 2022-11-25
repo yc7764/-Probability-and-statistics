@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+{% comment %} <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}"> {% endcomment %}
+{% endblock css %}
+
+
+{% block content %}
+  <div class="jumbotron">
+    <h2 align="center">Boards Model Data</h2>
+  </div>
+
+  <img src="{% static 'boards/images/write.png' %}" alt="" width="200px" height="200px">
+
+  <p></p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>CONTENT</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for board in boards %}
+        <tr>
+          <td>
+            {{board.pk}}
+          </td>
+          <td>
+            <a href="{% url 'boards:detail' board.pk%}">{{board.title}}</a>
+          </td>
+          <td>
+            {{board.content}}
+          </td>
+        </tr>
+
+      {% endfor %}
+    </tbody>
+
+  </table>
+
+  <a href="{% url 'boards:registerfrm' %}">[글쓰기]</a>
+
+{% endblock content %}

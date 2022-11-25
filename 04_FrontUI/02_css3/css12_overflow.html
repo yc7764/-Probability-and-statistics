@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#parent{
+		border: 1px solid black;
+		padding: 10px;
+		overflow: hidden;
+	}
+	/* 	child 요소에서 float요소를 사용했을 때, 문제 발생 parent의 요소를 벗어나서 레이아웃이 틀어짐 
+		1. parent 요소의 범위를 크게 잡는다.
+		2. parent의 overflow:hidden을 지정
+	*/
+	#child{
+		border: 1px solid tomato;
+		margin: 0px;
+		float: left;
+	}
+	#article{
+		border: 1px solid green;
+		margin: 0px;
+		height: 30px;
+		float: left;
+	}
+</style>
+</head>
+<body>
+<div id="parent">
+	<div id="child">
+		IT' MyLife 국민은행 과정 진행중
+	</div>
+</div>
+<div id="article">
+	2022-10-05 FrontUI Today Schedule!!
+</div>
+</body>
+</html>

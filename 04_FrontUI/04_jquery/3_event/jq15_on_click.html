@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>on()|click  ,  one()</title>
+<style type="text/css">
+	#now{ border-radius: 10px;   border: 1px solid red;}
+	#future{ border: 3px solid green;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$("#now").click(function(){
+		//$('p').append("<h2>KB It's your life</h2>")
+
+		$("#future").append("<h2 id=hello>KB It's your life</h2>");
+	}); //click
+
+	//on(이벤트. 이벤트적용 태그 아이디, 호출되는 함수명)
+	$("#future").on('click', '#hello', onhello);
+});
+
+function onhello(){
+	alert('onhello calling~~!!');
+};
+
+</script>
+</head>
+<body>
+	<div id="now">
+		<h1>$('selector').on('click')</h1>
+		<p>on 함수: 클릭함수와 동일해 보이지만 미래에 존재하는 태그에 사용되는 함수</p>
+	</div>
+	<div id="future">
+
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

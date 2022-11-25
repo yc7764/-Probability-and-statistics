@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/sunny/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#accordion").accordion({heightStyle: "content"});
+
+      $("#accordion h3").click(function () {
+        var text = $(this).text();
+        if (text == '참여혜택') {
+          $.ajax({
+            type: 'get',
+            url: '/ajaxapp/ajaxmeet',
+            dataType: 'json',
+            success: function (jsonData) {
+              var str = ''
+              $.each(jsonData.meets, function (index, item) {
+                str += '<li>' + item + '<li>';
+              })
+              $("#meetResult").html(str)
+            }
+          }) //ajax
+        } else if (text == '교육일정') {
+          $.ajax({
+            type: 'get',
+            url: '/ajaxapp/ajaxschedule',
+            dataType: 'json',
+            success: function (jsonData) {
+              var str = ''
+              $.each(jsonData.edus, function (index, item) {
+                str += '<li>' + item + '<li>';
+              })
+              $("#scheduleResult").html(str)
+            }
+          }) //ajax
+        }
+
+      }) //click
+    });
+  </script>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h2 align='center'>KB 국민은행 IT 아카데미 IT's Your Life 2</h2>
+    <p align='center'>2개월기간의 양질의 교육과정 | AI와 Programm</p>
+  </div>
+  <div id="accordion">
+    <h3>KB MyLife : INTRODUCTION</h3>
+    <div>
+      양질의 IT교육을 통한 청년 디지털 역량 강화로 IT인재로 거듭나는 새로운 삶 지원.
+      <br>
+      IT 금융 기초 소양, 금융 SW 교육 무상 제공<br>
+      (파이썬 기초교육, AI교육, 반응형 웹 개발)<br>
+      1:1 취업 컨설팅<br>
+    </div>
+
+    <h3>참여혜택</h3>
+    <div id='meetResult'>
+      <ul></ul>
+    </div>
+
+    <h3>교육일정</h3>
+    <div id='scheduleResult'>
+      <ul></ul>
+    </div>
+  </div>
+{% endblock content %}

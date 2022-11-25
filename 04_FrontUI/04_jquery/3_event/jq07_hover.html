@@ -1,0 +1,64 @@
+<!-- 
+	bind():: 여러개의 이벤트를 엮는 함수
+	mouseenter + mouseleave 이벤트 이용
+ -->
+ <!-- 
+	hover:: 두가지 마우스 이벤트를 가지고 있는 기능
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover() :: 두가지 마우스 이벤트(mouseenter, mouseleave)를 이미 가지고 있는 기능</title>
+<style type="text/css">
+	.reverse{
+		background: crimson;
+		color: azure;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	// $("h2").bind({
+	// 	mounseenter:function(){
+	// 		$(this).addClass('reverse');
+	// 	},
+	// 	mouseleave:function(){
+	// 		$(this).removeClass('reverse');
+	// 	}
+	// });
+	$('h2').hover(function(){
+		//mouseenter 이벤트
+		$(this).addClass('reverse');
+	}, function(){
+		//mouseleave 이벤트
+		$(this).removeClass('reverse');
+	})
+});
+</script>
+</head>
+<body>
+	<h2>오늘은 금요일입니다.</h2>
+	<h2>기분좋은 날이지요.</h2>
+	<h2>당근 퇴근한 후에는 맥주 한잔을 마셔야겠죠??</h2>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

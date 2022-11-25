@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Message ::
+    {{ message }}</h2>
+
+  <a href="{% url 'form' %}">뒤로가기</a>
+  <a href="{% url 'index' %}">INDEX</a>
+  <a href="{% url 'variables' %}">variables</a>
+  <a href="{% url 'filters' %}">filters</a>
+  <a href="{% url 'form' %}">form</a>
+{% endblock content %}

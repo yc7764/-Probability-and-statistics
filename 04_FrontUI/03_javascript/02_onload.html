@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합연산자, onload함수</title>
+    <script>
+        window.onload = function(){
+            var list = '';
+            list += '<ul>';
+            list += '<li>Hello</li>';
+            list += '<li>Javascript</li>';
+            list += '</ul>';
+            //div 영역에 list의 내용을 출력
+            document.getElementById("wrap").innerHTML = list;            
+        }
+        // var list = '';
+        // list += '<ul>';
+        // list += '<li>Hello</li>';
+        // list += '<li>Javascript</li>';
+        // list += '</ul>';
+        // //div 영역에 list의 내용을 출력
+        // document.getElementById("wrap").innerHTML = list;
+    </script>
+</head>
+<body>
+    <h2 align="center">===========onload===========</h2>
+    <div id="wrap"></div>
+</body>
+</html>

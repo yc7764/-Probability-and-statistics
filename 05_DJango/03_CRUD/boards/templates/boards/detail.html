@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>상세 글보기</h2>
+  <ul>
+    <li>글 제목
+      {{board.title}}</li>
+    <li>글 내용
+      {{board.content}}</li>
+    <li>글 처음 쓴 시각
+      {{board.created_at}}</li>
+    <li>글 수정한 시각
+      {{board.updated_at}}</li>
+  </ul>
+
+  <a href="{% url 'boards:index' %}">[INDEX]</a>
+  <form action="{% url 'boards:delete' board.pk %}" method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">DELETE</button>
+  </form>
+{% endblock content %}

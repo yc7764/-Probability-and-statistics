@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+    $('#listBtn').on('click', function(){
+        var list = [];
+        list.push('염미정');
+        list.push('구자경');
+        list.push('염창희');
+        list.push('염기정');
+
+        // alert(list.length);
+        var data = '';
+
+        // for(var i=0; i<list.length; i++){
+        //     data += list[i] + ' ';
+        // }
+        // alert(data);
+
+        // $(list).each(function(index){
+        //     data += list[index] + ' '
+        // })
+        // alert(data)
+
+        // $.each(list, function(index){
+        //     data += list[index] + ' '
+        // })
+        // alert(data)
+
+        // alert($.inArray('아이유', list));
+
+        $.each(list, function(index, item){
+            data += item + ' ';
+        })
+        alert(data)
+    })
+});//ready
+</script>
+</head>
+<body>
+    <input type="button" value="리스트 생성해서 each() 함수 적용" id="listBtn">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

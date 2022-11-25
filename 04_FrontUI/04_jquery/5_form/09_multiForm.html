@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	//1. 폼에 입력된 값을 다 가지고 ACTION에 연결된 페이지로 이동, 전송...하는 함수
+	$('#frm').submit(function(event){
+		//2. id, password 입력된 값을 각각의 변수에 할당...id, pass..
+		//  alert 창으로 값 확인...폼 초기화, password
+		
+		var id = $('#id').val();
+		var pass = $('#pass').val();
+		$('#id').val("");
+		$('#pass').val("");
+		
+		//submit 이벤트 작동안하도록 ..기본적인 이벤트 막아주는 함수,...preventDefault()
+		event.preventDefault();
+		
+		//
+	});//submit
+	
+	
+	
+	
+	
+	 
+	
+	
+	
+	//3. checkbox에서 취미를 하나도 선택하지 않으면...alert/하나 이상 선택하면...alert
+	
+
+		
+	
+	
+	//4. select 폼에서 선택한 번호가 resultView 영역에 뿌려지도록...
+	
+	
+});
+</script>
+</head>
+<body>
+<form action="09_result.jsp" id="frm">
+ID : <input type="text" name="id" id="id"><p>
+PASSWORD : <input type="password" name="pass" id="pass"><p><p>
+
+<strong>당신의 취미를 고르세요</strong>
+<input type="checkbox" name="hobby" value="Reading">Reading<br/>
+<input type="checkbox" name="hobby" value="Walking">Walking<br/>
+<input type="checkbox" name="hobby" value="Listen to Music">Listen to Music<br/>
+<input type="checkbox" name="hobby" value="Drinking">Drinking<br/><br/>
+<hr>
+<select id="hp" multiple="multiple" name="hp">
+	<option>010</option>
+	<option>011</option>
+	<option>017</option>
+</select><p>
+<input type="submit" value="SEND">
+
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

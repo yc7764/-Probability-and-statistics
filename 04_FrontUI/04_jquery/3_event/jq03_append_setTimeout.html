@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setInterval, appendTo</title>
+<style type="text/css">
+	.star{ border: 2px solid black; width: 200px; height: 240px;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$('img').addClass('star');
+	
+	//1. setTimeout() 함수를 이용해서 3초뒤에 맨 첫번째 이미지가 맨 뒤에 가도록(body..뒤에..append)
+	// setTimeout(function(){
+	// 	//3초 뒤에 한번만 동작하는 함수
+	// 	// $("body").append($('img:first'))
+	// 	$("body").append($('img:eq(0)'))
+	// }, 3000);
+	
+	//2. setInterval()...특정한 시간을 간격으로 매번 호출되는 함수....
+	setInterval(function(){
+		//$("body").append($('img:eq(0)'))
+		//tag에 content를 부착할때만 사용, content에 tag를 부착하고자 하면 안됨
+		$('img:eq(0)').appendTo('body');
+	}, 1000);
+});
+</script>
+</head>
+<body>
+<img alt="" src="./image/1.jpg">
+<img alt="" src="./image/2.jpg">
+<img alt="" src="./image/3.jpg">
+</body>
+</html>
+
+
+
+
+
+
+
+

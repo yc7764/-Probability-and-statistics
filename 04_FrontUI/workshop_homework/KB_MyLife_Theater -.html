@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        h1{
+            font-weight: bold;
+            font-size: 40px;
+            margin: 30px 0;
+        }
+        p{
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .title{
+            border: 10px double yellow;
+            width: 600px;
+            height: 1000px;
+            margin-left: 400px;
+            padding: 10px; 
+        }
+        header{
+            text-align: center;
+        }
+        .time{
+            padding:15px;
+            width: 300px;
+            height: 50px;   
+            display: inline;
+            border:1px solid black;
+            
+        }
+        legend {
+            margin: 10px;
+        }
+        fieldset{
+            margin: 0 20px;
+        }
+    </style>
+
+    <script>
+$( function(){
+    $('#movie').on('change',function(){
+        theater = $('option:selected').val()
+		alert(theater);
+		
+	});
+	
+    $('#date').on('change',function(){
+        date = $('#date').val()
+		alert(date);
+	});
+
+
+    $('input[type=radio]').click(function(){
+        
+        time = $(this).val();
+        if(time == "8:30"){
+            wage = 5000;
+        }else{
+            wage = 9000;
+        }
+    });
+
+    $('#ppl').change(function(){
+        ppl = $('#ppl').val();
+        $('#wage').val(ppl * wage);
+    })
+    
+    
+
+
+});
+
+    </script>
+</head>
+<body>
+    <div class="title">
+        <header>
+        <h1>KB MyLife Theater</h1>
+        <p>탑건 매버릭 예매</p>
+        <img width="300px;" height="400px;" src="https://newsimg.sedaily.com/2022/07/16/268JM9SXC7_9.jpg">
+        </header>
+        <br><br>
+        <strong>상영관</strong>
+        <select name="movie" id="movie">
+            <option value="cgv">cgv</option>
+            <option value="megabox">megabox</option>
+            <option value="lotte">lotte</option>
+            
+        </select>
+        <strong>날짜선택</strong>
+        <input type="date" id="date">
+        <br><br>
+        
+        <fieldset>
+            <legend>시간선택</legend>
+            <input type="radio" name="time" value="8:30">8:30
+            <input type="radio" name="time" value="11:00">11:00
+            <input type="radio" name="time" value="14:20">14:20
+            <input type="radio" name="time" value="17:25">17:25
+            <input type="radio" name="time" value="20:10">20:10
+            <input type="radio" name="time" value="23:05">23:05
+        </fieldset>
+        <br>
+        <label>요금</label>
+        <del>W9,000</del> <ins>W5,000</ins>
+        <br><br>
+        인원 <input type="number" id="ppl" placeholder="0">
+        <br><br>
+        금액 <input type="text" id="wage" placeholder="0">
+        <br><br>
+        <input type="checkbox" value="option" checked="checked">옵션
+        <br><br>
+        <fieldset style="padding: 20px;">
+            <input type="checkbox" value="팝콘">팝콘
+            <input type="checkbox" value="콜라">콜라
+
+        </fieldset>
+    </div>
+</body>
+</html>

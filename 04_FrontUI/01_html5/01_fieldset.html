@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form의 fieldset</title>
+    <style>
+        form{
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+        }
+        legend{
+            font-size: 43px;
+            color: blueviolet;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- form태그 안에 다양한 입력양식들이 온다-->
+    <form action="#">
+        <fieldset>
+            <legend>Front UI Fieldset</legend>
+            <label>ID</label>
+            <input type="text", name="userId", id="userId"><br><br>
+
+            <label>PASSWORD</label>
+            <input type="password",name="userPass"><br><br>
+
+            <label>TODAY</label>
+            <input type="date", name="today"><br><br>
+
+            <label>FILE</label>
+            <input type="file", name="file"><br><br>
+        </fieldset>
+    </form>
+</body>
+</html>

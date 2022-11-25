@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/*  class 속성의 값으로 스타일을 지정....*/
+	.high_light_0 { background: yellow }
+	.high_light_1 { background: pink }
+	.high_light_2 { background: cyan }
+	.high_light_3 { background: green }
+	.high_light_4 { background: purple }
+	.high_light_5 { background: magenta }
+	.high_light_6 { background: gray }
+	.high_light_7 { background: orange }
+	
+	/*  속성을 하나 더 추가 */
+	.fontstyle{color: blue; font-family: sans-serif;}
+	
+	.nth{ border: 5px double black ;}
+	
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+/*
+each() :: 일종의 for문과 같다..
+           동일한 태그가 반복적으로 나왔을때 적용하는 함수...
+      h1 태그의 갯수만큼 each() 함수가 수행된다고 볼수 있다...내부적으로 index가 돌아간다.
+         첫번째 index는 당연히 0이된다
+*/
+$(function() {
+	
+	$('h1').each(function(index){
+		$(this).addClass('high_light_'+index);
+	});
+	//2. 마지막 h1 태그를 선택자로 지정...fontstyle 을 ...
+	$('h1').last().addClass('fontstyle');
+	
+	//3. 여러개의 h1태그중에서 짝수번째 ...nth을...
+	$('h1:even').addClass('nth');
+});
+</script>
+</head>
+<body>
+	<h1>Item-0</h1>
+	<h1>Item-1</h1>
+	<h1>Item-2</h1>
+	<h1>Item-3</h1>
+	<h1>Item-4</h1>
+	<h1>Item-5</h1>
+	<h1>Item-6</h1>
+	<h1>Item-7</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

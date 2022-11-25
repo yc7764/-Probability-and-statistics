@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+var numbers; //5,23,6,12,33,45
+var count = 0;
+var intervalId;
+
+function startGame() {
+	numbers = selectNumber();
+	intervalId=setInterval(displayNumber,1000);
+}
+
+function selectNumber() {
+	var numbers = new Array(6);
+	var flags = new Array(46);
+	//
+	
+}
+
+function displayNumber() {
+	//appned()를 이용해서 numbers 안에 들어있는 숫자를 result영역에 붙여나간다...
+	//만약에 count가 6이되면 intervalId을 멈춘다...
+	clearInterval(intervalId);
+}
+window.onload = startGame;
+</script>
+</head>
+<body>
+	<h3>대박을 기원합니다~~~</h3>
+	<div id="result"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

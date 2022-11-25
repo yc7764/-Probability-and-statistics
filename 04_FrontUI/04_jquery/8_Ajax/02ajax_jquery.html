@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {	
+		$("#ajaxBtn").click(function(){
+			var id = $("#userId").val();
+			//alert(id);
+			$.ajax({
+				//데이터 전달이 아니라 페이지 연결이 목적
+				//서버페이지로 연결할때 주소?key=value 형식으로 url창에 붙여서 데이터 전달
+				type: 'get',
+				url: "http://127.0.0.1:5500/kb.json?id=" + id,
+				success:function(result){
+					$("#resultView").html('<h2>'+id+'님의 슬로건은' + result.KB + "입니다.</h2>")
+				}
+			})//ajax
+		})//click
+	}); //ready
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+	ID : <input type="text" name="userId" id="userId">
+	<input type="button" value="JQueryAjax" id="ajaxBtn">
+	<div id="resultView">
+
+	</div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="jumbotron" style="text-align:center">
+    <h2>Topic Model Data</h2>
+  </div>
+  <a href="{% url 'boards:registerfrm' %}">글쓰기</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>CONTENT</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for board in boards %}
+        <tr>
+          <td>{{board.pk}}</td>
+          <td>
+            <a href="{% url 'boards:detail' board.pk %}">{{board.title}}</a>
+          </td>
+          <td>{{board.content}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock content %}

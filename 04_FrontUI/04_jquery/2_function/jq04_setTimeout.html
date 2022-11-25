@@ -1,0 +1,71 @@
+<!--  
+value | val()
+addClass()
+filter()
+first()
+last()
+setTimeout()
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	//1. select 태그중에서 선택한 값..이름...name 변수에 할당...alert(name)
+	// var name = $('select>option').val();
+	// alert(name);
+	
+	
+	//2. setTimeout()을 사용해서 일정 시간이후에 로직이 돌아가도록...
+	// 단 한번만 호출된다...
+	// setTimeout(function(){
+	// 	var name = $('select>option:selected').val();
+	// 	alert(name);
+	// }, 2000);
+	
+	//3. select 폼에서 내가 선택한 이름이...5초 지난후 아래에 추가한 입력박스에 출력되도록...setTimeout()을 사용
+	setTimeout(function(){
+		var name = $('select>option:selected').val();
+		$('input[name=result').val(name);
+	}, 5000);
+});
+</script>
+</head>
+<body>
+	<select multiple="multiple">
+		<option>호동이</option>
+		<option>수근이</option>
+		<option>장후니</option>
+		<option>상미니</option>
+	</select><br/><br/>
+	선택한 친구이름 출력 : <input type="text" name="result" size="19">
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	$('h1, p').css('color','orange')
+	//$('p:first').css('background', 'gray')
+	//$('p').first().css('background', 'gray')
+	$('p:eq(0)').css('background', 'gray')
+
+	$('p:eq(2)').css('background', 'cyan')// last(), p:last, p:eq(-1) 모두 가능
+
+	$('p.item').css('color', 'blue')
+});
+</script>
+</head>
+<body>
+<h1>What is jQuery?</h1>
+<div>
+	<p>jQuery is a fast, small, and feature-rich JavaScript library.</p>
+</div>
+<p id="paragraph">it makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers</p>
+<p class="statement">With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+<p class="statement item">With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

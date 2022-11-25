@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>unbind() :: 이벤트를 해제시키는 함수</title>
+<style type="text/css">
+	.reverse{ background: blue; color: white;}
+	.click{ color: red;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){
+	//1. 첫번째 h2 태그를 클릭하면...클릭한 부분의 내용들이 red로 변하도록 선택자와 함수를 연결....
+	// $('h2:first').click(function(){
+	// 	// $(this).html("clicked").addClass("click");
+	// 	$(this).html("<font color=red>click</font>");
+		
+	// 	alert("click....!!!");
+
+	// 	$(this).unbind();
+	// });
+
+	// $('h2:first').bind('click', function(){
+	// 	// $(this).html("clicked").addClass("click");
+	// 	$(this).html("<font color=red>click</font>");
+		
+	// 	alert("click....!!!");
+
+	// 	$(this).unbind();
+	// });
+
+	// $('h2:first').on('click', function(){
+	// 	// $(this).html("clicked").addClass("click");
+	// 	$(this).html("<font color=red>click</font>");
+		
+	// 	alert("click....!!!");
+
+	// 	$(this).unbind();
+	// });
+
+	//one:: 클릭을 단 한번만
+	$('h2:first').one('click', function(){
+		// $(this).html("clicked").addClass("click");
+		$(this).html("<font color=red>click</font>");
+		
+		alert("click....!!!");
+
+		//$(this).unbind();
+	});
+});
+</script>
+</head>
+<body>
+	<h2>오늘은 금요일입니다.</h2>
+	<h2>기분좋은 날이지요.</h2>
+	<h2>당근 퇴근한 후에는 맥주 한잔을 마셔야겠죠??</h2>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

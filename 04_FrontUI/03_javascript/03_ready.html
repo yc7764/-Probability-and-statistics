@@ -1,0 +1,36 @@
+<!-- 
+    javascript :: onload
+    jQuery :: ready
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onload함수와 ready함수의 차이점</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        //jquery의 html 모든 요소들을 메모리에 올리고 실행되도록하는 함수
+        $(document).ready(function(){
+            var list = '';
+            list += '<ul>';
+            list += '<li>Hello</li>';
+            list += '<li>Javascript</li>';
+            list += '</ul>';
+            //div 영역에 list의 내용을 출력
+            document.getElementById("wrap").innerHTML = list;
+        });
+        $(document).ready(function(){
+            alert("AAAA~~~!!")
+        })
+        $(document).ready(function(){
+            alert("BBBB~~~!!")
+        })
+    </script>
+</head>
+<body>
+    <h2 align="center">===========onload===========</h2>
+    <div id="wrap"></div>
+</body>
+</html>

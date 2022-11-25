@@ -1,0 +1,79 @@
+<!-- 
+    val(), html('<h2>hello</h2>')==text('<h2>hello</h2>')
+
+    setTimeout(), setInterval()
+
+    addClass(), removeClass()
+
+    mouseenter(), mouseleave(), hover()
+
+    click(), on('click'), bind('click'), one()
+
+    unbind()
+
+    hide(), show()
+    fadeIn(), faedOut(), fadeTo(), fadeToggle()
+
+    find()
+
+    each()
+
+    append(), appendTo()
+    append(), after(), prepend(), before()
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지 숨기기 hide()   | 이미지 보이기 show() </title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+    // //1. 로딩되자마자 일단은 이미지를 숨긴다...hide()
+    // $("#mouseView").hide();
+    
+    // //2. 마우스가 사진보기 영역으로 진입하면...이미지가 보이도록...show()
+    // $("#mouseIn").mouseenter(function(){
+    //     //$("#mouseView").show(3000);
+    //     $("#mouseView").fadeIn();
+    // });
+
+    // //3. 마우스가 사진보기 영역밖으로 나가면... 이미지가 다시 안보이도록...hide()
+    // $("#mouseIn").mouseleave(function(){
+    //     //$("#mouseView").hide(1000);
+    //     $("#mouseView").fadeOut();
+    // });
+
+    $("#mouseIn").hover(function(){
+        $("#mouseView").fadeIn();
+    },function(){
+        $("#mouseView").fadeOut();
+    })
+});
+</script>
+</head>
+<body>
+<h2 id="mouseIn">++++++++++++++ 사진 보기 +++++++++++++++++</h2>
+<div id="mouseView"><img src="./image/1.jpg" alt="" width="300px" height="400px"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

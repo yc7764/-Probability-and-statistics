@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	//1. a 태그의 속성중에서 school 단어가 포함되어 있는 사이트를 클릭했을때 
+	//   confirm 창 뜨면서 "w3schools" 사이트로 이동하시겠습니까?" yes 바로 이동
+	$("a[href*=school]").on('click', function(){
+		confirm($(this).text() + '사이트로 이동하시겠습니까?')
+	})
+});
+</script>
+</head>
+<body>
+<a href="http://www.jquery.com">JQuery</a>
+<a href="https://www.w3schools.com/">w3school</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
